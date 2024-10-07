@@ -9,9 +9,9 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 - [Özellikler](#-özellikler)
 - [Teknolojiler](#-teknolojiler)
 - [Proje Yapısı](#-proje-yapısı)
+- [Modüller](#-modüller)
 - [Kurulum](#-kurulum)
 - [Kullanım](#-kullanım)
-- [Modüller](#-modüller)
 
 ## 🌟 Özellikler 
 
@@ -39,6 +39,17 @@ Proje, aşağıdaki ana bileşenleri içerir:
 - `Extensions`: Swift sınıfları için ek işlevsellik
 - `Resources`: Varlıklar ve yapılandırma dosyaları
 - `Utilities`: Yardımcı işlevler ve araçlar
+
+## 📚 Modüller
+
+Proje, aşağıdaki ana modüllere ayrılmıştır:
+
+- [Core](./Sports%20Betting%20App/Core/README+Core.md)
+- [Features](./Sports%20Betting%20App/Features/README+Features.md)
+- [Extensions](./Sports%20Betting%20App/Extensions/README+Extensions.md)
+- [Utilities](./Sports%20Betting%20App/Utilities/README+Utilities.md)
+
+Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
 
 ## 💻 Kurulum 
 
@@ -91,13 +102,3 @@ Sepetteki bahisler, swipe action kullanılarak kolayca silinebilir.
 
 ![Sepet swipe action örneği](images/swipe-action.PNG)
 
-## 📚 Modüller
-
-Proje, aşağıdaki ana modüllere ayrılmıştır:
-
-- [Core](./Sports%20Betting%20App/Core/README+Core.md)
-- [Features](./Sports%20Betting%20App/Features/README+Features.md)
-- [Extensions](./Sports%20Betting%20App/Extensions/README+Extensions.md)
-- [Utilities](./Sports%20Betting%20App/Utilities/README+Utilities.md)
-
-Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
