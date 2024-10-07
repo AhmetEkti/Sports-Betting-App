@@ -15,7 +15,7 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 - [Katkıda Bulunma](#katkıda-bulunma)
 - [Lisans](#lisans)
 
-## 🌟 Özellikler #özellikler
+## 🌟 Özellikler (#özellikler)
 
 - Reaktif programlama ile güçlendirilmiş kullanıcı arayüzü
 - Gerçek zamanlı bahis oranları ve etkinlik güncellemeleri
@@ -42,7 +42,7 @@ Proje, aşağıdaki ana bileşenleri içerir:
 - `Resources`: Varlıklar ve yapılandırma dosyaları
 - `Utilities`: Yardımcı işlevler ve araçlar
 
-## 💻 Kurulum
+## 💻 Kurulum (#kurulum)
 
 1. Repoyu klonlayın:
    ```
