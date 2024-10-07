@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Configuration.plist
-   Sports Betting App
-
-   Created by Ahmet Ekti on 10/4/24.
--->
 <plist version="1.0">
 <dict>
-    <key>APIKey</key>
-    <string>90387caea765e22273add6742fd2f917</string>
+	<key>APIKey</key>
+	<string>6ce7285e9d98493c88eea25085015330</string>
 </dict>
 </plist>
