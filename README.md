@@ -15,7 +15,7 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 - [Katkıda Bulunma](#katkıda-bulunma)
 - [Lisans](#lisans)
 
-## 🌟 Özellikler (#özellikler)
+## 🌟 Özellikler 
 
 - Reaktif programlama ile güçlendirilmiş kullanıcı arayüzü
 - Gerçek zamanlı bahis oranları ve etkinlik güncellemeleri
@@ -42,7 +42,7 @@ Proje, aşağıdaki ana bileşenleri içerir:
 - `Resources`: Varlıklar ve yapılandırma dosyaları
 - `Utilities`: Yardımcı işlevler ve araçlar
 
-## 💻 Kurulum (#kurulum)
+## 💻 Kurulum 
 
 1. Repoyu klonlayın:
    ```
@@ -51,7 +51,7 @@ Proje, aşağıdaki ana bileşenleri içerir:
 2. Xcode ile `Sports Betting App.xcodeproj` dosyasını açın.
 3. Projeyi derleyin ve çalıştırın.
 
-## 🎮 Kullanım #kullanım
+## 🎮 Kullanım
 
 Uygulama, ana ekranda mevcut bahis etkinliklerini listeler. Kullanıcılar:
 
