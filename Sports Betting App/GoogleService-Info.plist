@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCsvmYVHVBIUYfQFjI5fRFqaCiVkIxc0Yg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>369148277530</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>bilyoner.Sports-Betting</string>
+	<key>PROJECT_ID</key>
+	<string>sports-betting-app-3bc46</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sports-betting-app-3bc46.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:369148277530:ios:370e12c9aa3104c60532a3</string>
+</dict>
+</plist>

@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9059C822CB3785B0051F62C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F9059C812CB3785B0051F62C /* FirebaseAnalytics */; };
+		F9059C882CB383BA0051F62C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F9059C872CB383BA0051F62C /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F988AC812CB1AC7A00200B02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F988AC622CB1AC7900200B02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F988AC692CB1AC7900200B02;
+			remoteInfo = "Sports Betting App";
+		};
+		F988AC8B2CB1AC7A00200B02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F988AC622CB1AC7900200B02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F988AC692CB1AC7900200B02;
+			remoteInfo = "Sports Betting App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9059C872CB383BA0051F62C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F988AC6A2CB1AC7900200B02 /* Sports Betting App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sports Betting App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F988AC802CB1AC7A00200B02 /* Sports Betting AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sports Betting AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F988AC8A2CB1AC7A00200B02 /* Sports Betting AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sports Betting AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F9059B982CB345130051F62C /* Exceptions for "Sports Betting App" folder in "Sports Betting App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F988AC692CB1AC7900200B02 /* Sports Betting App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F9059B752CB345130051F62C /* Sports Betting App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F9059B982CB345130051F62C /* Exceptions for "Sports Betting App" folder in "Sports Betting App" target */,
+			);
+			path = "Sports Betting App";
+			sourceTree = "<group>";
+		};
+		F988AC832CB1AC7A00200B02 /* Sports Betting AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Sports Betting AppTests";
+			sourceTree = "<group>";
+		};
+		F988AC8D2CB1AC7A00200B02 /* Sports Betting AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Sports Betting AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F988AC672CB1AC7900200B02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9059C822CB3785B0051F62C /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F988AC7D2CB1AC7A00200B02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F988AC872CB1AC7A00200B02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F988AC612CB1AC7900200B02 = {
+			isa = PBXGroup;
+			children = (
+				F9059C872CB383BA0051F62C /* README.md */,
+				F9059B752CB345130051F62C /* Sports Betting App */,
+				F988AC832CB1AC7A00200B02 /* Sports Betting AppTests */,
+				F988AC8D2CB1AC7A00200B02 /* Sports Betting AppUITests */,
+				F988AC6B2CB1AC7900200B02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F988AC6B2CB1AC7900200B02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F988AC6A2CB1AC7900200B02 /* Sports Betting App.app */,
+				F988AC802CB1AC7A00200B02 /* Sports Betting AppTests.xctest */,
+				F988AC8A2CB1AC7A00200B02 /* Sports Betting AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F988AC692CB1AC7900200B02 /* Sports Betting App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F988AC932CB1AC7A00200B02 /* Build configuration list for PBXNativeTarget "Sports Betting App" */;
+			buildPhases = (
+				F988AC662CB1AC7900200B02 /* Sources */,
+				F988AC672CB1AC7900200B02 /* Frameworks */,
+				F988AC682CB1AC7900200B02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F9059B752CB345130051F62C /* Sports Betting App */,
+			);
+			name = "Sports Betting App";
+			packageProductDependencies = (
+				F9059C812CB3785B0051F62C /* FirebaseAnalytics */,
+			);
+			productName = "Sports Betting App";
+			productReference = F988AC6A2CB1AC7900200B02 /* Sports Betting App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F988AC7F2CB1AC7A00200B02 /* Sports Betting AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F988AC982CB1AC7A00200B02 /* Build configuration list for PBXNativeTarget "Sports Betting AppTests" */;
+			buildPhases = (
+				F988AC7C2CB1AC7A00200B02 /* Sources */,
+				F988AC7D2CB1AC7A00200B02 /* Frameworks */,
+				F988AC7E2CB1AC7A00200B02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F988AC822CB1AC7A00200B02 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F988AC832CB1AC7A00200B02 /* Sports Betting AppTests */,
+			);
+			name = "Sports Betting AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Sports Betting AppTests";
+			productReference = F988AC802CB1AC7A00200B02 /* Sports Betting AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F988AC892CB1AC7A00200B02 /* Sports Betting AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F988AC9B2CB1AC7A00200B02 /* Build configuration list for PBXNativeTarget "Sports Betting AppUITests" */;
+			buildPhases = (
+				F988AC862CB1AC7A00200B02 /* Sources */,
+				F988AC872CB1AC7A00200B02 /* Frameworks */,
+				F988AC882CB1AC7A00200B02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F988AC8C2CB1AC7A00200B02 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F988AC8D2CB1AC7A00200B02 /* Sports Betting AppUITests */,
+			);
+			name = "Sports Betting AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Sports Betting AppUITests";
+			productReference = F988AC8A2CB1AC7A00200B02 /* Sports Betting AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F988AC622CB1AC7900200B02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					F988AC692CB1AC7900200B02 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					F988AC7F2CB1AC7A00200B02 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = F988AC692CB1AC7900200B02;
+					};
+					F988AC892CB1AC7A00200B02 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = F988AC692CB1AC7900200B02;
+					};
+				};
+			};
+			buildConfigurationList = F988AC652CB1AC7900200B02 /* Build configuration list for PBXProject "Sports Betting App" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F988AC612CB1AC7900200B02;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F9059C802CB3785B0051F62C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F988AC6B2CB1AC7900200B02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F988AC692CB1AC7900200B02 /* Sports Betting App */,
+				F988AC7F2CB1AC7A00200B02 /* Sports Betting AppTests */,
+				F988AC892CB1AC7A00200B02 /* Sports Betting AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F988AC682CB1AC7900200B02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9059C882CB383BA0051F62C /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F988AC7E2CB1AC7A00200B02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F988AC882CB1AC7A00200B02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F988AC662CB1AC7900200B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F988AC7C2CB1AC7A00200B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F988AC862CB1AC7A00200B02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F988AC822CB1AC7A00200B02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F988AC692CB1AC7900200B02 /* Sports Betting App */;
+			targetProxy = F988AC812CB1AC7A00200B02 /* PBXContainerItemProxy */;
+		};
+		F988AC8C2CB1AC7A00200B02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F988AC692CB1AC7900200B02 /* Sports Betting App */;
+			targetProxy = F988AC8B2CB1AC7A00200B02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F988AC942CB1AC7A00200B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VCX6346WMB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sports Betting App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bilyoner.Sports-Betting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F988AC952CB1AC7A00200B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VCX6346WMB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sports Betting App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bilyoner.Sports-Betting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F988AC962CB1AC7A00200B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F988AC972CB1AC7A00200B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F988AC992CB1AC7A00200B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGNWW8F2DR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bilyoner.Sports-Betting-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sports Betting App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sports Betting App";
+			};
+			name = Debug;
+		};
+		F988AC9A2CB1AC7A00200B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGNWW8F2DR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bilyoner.Sports-Betting-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sports Betting App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sports Betting App";
+			};
+			name = Release;
+		};
+		F988AC9C2CB1AC7A00200B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGNWW8F2DR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bilyoner.Sports-Betting-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Sports Betting App";
+			};
+			name = Debug;
+		};
+		F988AC9D2CB1AC7A00200B02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGNWW8F2DR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bilyoner.Sports-Betting-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Sports Betting App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F988AC652CB1AC7900200B02 /* Build configuration list for PBXProject "Sports Betting App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F988AC962CB1AC7A00200B02 /* Debug */,
+				F988AC972CB1AC7A00200B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F988AC932CB1AC7A00200B02 /* Build configuration list for PBXNativeTarget "Sports Betting App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F988AC942CB1AC7A00200B02 /* Debug */,
+				F988AC952CB1AC7A00200B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F988AC982CB1AC7A00200B02 /* Build configuration list for PBXNativeTarget "Sports Betting AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F988AC992CB1AC7A00200B02 /* Debug */,
+				F988AC9A2CB1AC7A00200B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F988AC9B2CB1AC7A00200B02 /* Build configuration list for PBXNativeTarget "Sports Betting AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F988AC9C2CB1AC7A00200B02 /* Debug */,
+				F988AC9D2CB1AC7A00200B02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9059C802CB3785B0051F62C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9059C812CB3785B0051F62C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9059C802CB3785B0051F62C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F988AC622CB1AC7900200B02 /* Project object */;
+}
