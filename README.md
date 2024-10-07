@@ -84,6 +84,16 @@ Bahis oranları ve etkinlik bilgileri [The Odds API](https://the-odds-api.com/) 
 ### Google Analytics
 
 Kullanıcı davranışları ve uygulama içi etkileşimler, Google Analytics kullanılarak takip edilmektedir. Önemli olaylar ve kullanıcı aksiyonları özel olarak izlenmektedir.
+Aşağıdaki ekran görüntüsünde, Google Analytics web arayüzünde uygulamaya ait verilerin nasıl göründüğünü görebilirsiniz:
+![Google Analytics entegrasyon ekran görüntüsü](images/analytics.png)
+
+Bu dashboard üzerinden şunları izleyebiliyoruz:
+
+Aktif kullanıcı sayısı
+Oturum süreleri
+En çok ziyaret edilen sayfalar
+Kullanıcı etkileşim oranları
+
 
 ### Dinamik UI
 
