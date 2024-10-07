@@ -97,10 +97,10 @@ Sepetteki bahisler, swipe action kullanılarak kolayca silinebilir.
 
 Proje, aşağıdaki ana modüllere ayrılmıştır:
 
-- [Core](./Core/README.md)
-- [Features](./Features/README.md)
-- [Extensions](./Extensions/README.md)
-- [Utilities](./Utilities/README.md)
+- [Core](./Core/README+Core.md)
+- [Features](./Features/README+Features.md)
+- [Extensions](./Extensions/README+Extensions.md)
+- [Utilities](./Utilities/README+Utilities.md)
 
 Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
 
