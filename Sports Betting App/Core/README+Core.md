@@ -50,11 +50,13 @@ Bu modül, uygulamanın temel yapılandırma ve görünüm ayarlarını yönetir
 
 - Uygulama genelinde tutarlı görünüm sağlama
 - Yapılandırma değerlerini yönetme
+- Uygulama başlatma işlemlerini yönetme
 
 ### 🧩 Bileşenler
 
 - `AppearanceConfigurator`: Uygulamanın genel görünümünü yapılandırmak için kullanılan yapı
 - `ConfigurationManager`: Uygulama yapılandırma değerlerini yöneten singleton sınıf
+- `AppInitializer`: Uygulama başlatma işlemlerini yöneten sınıf
 
 ## 🌐 Networking
 
@@ -80,10 +82,12 @@ Bu modül, uygulamanın güvenlik ile ilgili bileşenlerini içerir ve hassas ve
 ### 🌟 Özellikler
 
 - Keychain kullanarak hassas verileri güvenli şekilde saklama
+- Kullanıcı izinlerini yönetme
 
 ### 🧩 Bileşenler
 
 - `KeychainManager`: iOS'un Keychain servisini kullanarak hassas verileri yöneten yardımcı sınıf
+- `TrackingPermissionManager`: Kullanıcı izleme izinlerini yöneten sınıf
 
 ## 🎨 Theme
 

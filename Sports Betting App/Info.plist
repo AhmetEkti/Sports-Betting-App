@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Uygulama deneyiminizi iyileştirmek ve size daha iyi hizmet sunmak için izninizi istiyoruz. Verileriniz, uygulamayı kullanım şeklinize göre kişiselleştirme ve geliştirme amacıyla kullanılacaktır.</string>
 </dict>
 </plist>
