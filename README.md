@@ -97,10 +97,10 @@ Sepetteki bahisler, swipe action kullanılarak kolayca silinebilir.
 
 Proje, aşağıdaki ana modüllere ayrılmıştır:
 
-- [Core](./Sports-Betting-App/Core/README+Core.md)
-- [Features](./Sports-Betting-App/Features/README+Features.md)
-- [Extensions](./Sports-Betting-App/Extensions/README+Extensions.md)
-- [Utilities](./Sports-Betting-App/Utilities/README+Utilities.md)
+- [Core](./Sports%20Betting%20App/Core/README+Core.md)
+- [Features](./Sports%20Betting%20App/Features/README+Features.md)
+- [Extensions](./Sports%20Betting%20App/Extensions/README+Extensions.md)
+- [Utilities](./Sports%20Betting%20App/Utilities/README+Utilities.md)
 
 Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
 
