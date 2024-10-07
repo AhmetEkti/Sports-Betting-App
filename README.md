@@ -6,23 +6,20 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 
 ## 📚 İçindekiler
 
-- [Özellikler](#özellikler)
-- [Teknolojiler](#teknolojiler)
-- [Proje Yapısı](#proje-yapısı)
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Modüller](#modüller)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [Lisans](#lisans)
+- [Özellikler](#-özellikler)
+- [Teknolojiler](#-teknolojiler)
+- [Proje Yapısı](#-proje-yapısı)
+- [Modüller](#-modüller)
+- [Kurulum](#-kurulum)
+- [Kullanım](#-kullanım)
 
-## 🌟 Özellikler
+## 🌟 Özellikler 
 
 - Reaktif programlama ile güçlendirilmiş kullanıcı arayüzü
 - Gerçek zamanlı bahis oranları ve etkinlik güncellemeleri
 - Kişiselleştirilmiş bahis sepeti yönetimi
 - Google Analytics ile kullanıcı davranışı takibi
-- Yenilikçi ve sezgisel kullanıcı deneyimi
-
+  
 ## 🛠 Teknolojiler
 
 - Swift 5
@@ -42,7 +39,18 @@ Proje, aşağıdaki ana bileşenleri içerir:
 - `Resources`: Varlıklar ve yapılandırma dosyaları
 - `Utilities`: Yardımcı işlevler ve araçlar
 
-## 💻 Kurulum
+## 📚 Modüller
+
+Proje, aşağıdaki ana modüllere ayrılmıştır:
+
+- [Core](./Sports%20Betting%20App/Core/README+Core.md)
+- [Features](./Sports%20Betting%20App/Features/README+Features.md)
+- [Extensions](./Sports%20Betting%20App/Extensions/README+Extensions.md)
+- [Utilities](./Sports%20Betting%20App/Utilities/README+Utilities.md)
+
+Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
+
+## 💻 Kurulum 
 
 1. Repoyu klonlayın:
    ```
@@ -93,27 +101,3 @@ Sepetteki bahisler, swipe action kullanılarak kolayca silinebilir.
 
 ![Sepet swipe action örneği](images/swipe-action.PNG)
 
-## 📚 Modüller
-
-Proje, aşağıdaki ana modüllere ayrılmıştır:
-
-- [Core](./Core/README.md)
-- [Features](./Features/README.md)
-- [Extensions](./Extensions/README.md)
-- [Utilities](./Utilities/README.md)
-
-Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
-
-## 🤝 Katkıda Bulunma
-
-Katkılarınızı memnuniyetle karşılıyoruz! Lütfen şu adımları izleyin:
-
-1. Projeyi forklayın
-2. Yeni bir feature branch'i oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
-5. Bir Pull Request oluşturun
-
-## 📄 Lisans
-
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
