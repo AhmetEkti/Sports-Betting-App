@@ -6,14 +6,12 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 
 ## 📚 İçindekiler
 
-- [Özellikler](#özellikler)
-- [Teknolojiler](#teknolojiler)
-- [Proje Yapısı](#proje-yapısı)
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Modüller](#modüller)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [Lisans](#lisans)
+- [Özellikler](#-özellikler)
+- [Teknolojiler](#-teknolojiler)
+- [Proje Yapısı](#-proje-yapısı)
+- [Kurulum](#-kurulum)
+- [Kullanım](#-kullanım)
+- [Modüller](#-modüller)
 
 ## 🌟 Özellikler 
 
