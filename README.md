@@ -19,8 +19,7 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 - Gerçek zamanlı bahis oranları ve etkinlik güncellemeleri
 - Kişiselleştirilmiş bahis sepeti yönetimi
 - Google Analytics ile kullanıcı davranışı takibi
-- Yenilikçi ve sezgisel kullanıcı deneyimi
-
+  
 ## 🛠 Teknolojiler
 
 - Swift 5
