@@ -305,6 +305,7 @@
 				DEVELOPMENT_TEAM = VCX6346WMB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sports Betting App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SBA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,6 +334,7 @@
 				DEVELOPMENT_TEAM = VCX6346WMB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sports Betting App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SBA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
