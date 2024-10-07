@@ -15,7 +15,7 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 - [Katkıda Bulunma](#katkıda-bulunma)
 - [Lisans](#lisans)
 
-## 🌟 Özellikler
+## 🌟 Özellikler #özellikler
 
 - Reaktif programlama ile güçlendirilmiş kullanıcı arayüzü
 - Gerçek zamanlı bahis oranları ve etkinlik güncellemeleri
@@ -51,7 +51,7 @@ Proje, aşağıdaki ana bileşenleri içerir:
 2. Xcode ile `Sports Betting App.xcodeproj` dosyasını açın.
 3. Projeyi derleyin ve çalıştırın.
 
-## 🎮 Kullanım
+## 🎮 Kullanım #kullanım
 
 Uygulama, ana ekranda mevcut bahis etkinliklerini listeler. Kullanıcılar:
 
@@ -103,17 +103,3 @@ Proje, aşağıdaki ana modüllere ayrılmıştır:
 - [Utilities](./Sports%20Betting%20App/Utilities/README+Utilities.md)
 
 Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
-
-## 🤝 Katkıda Bulunma
-
-Katkılarınızı memnuniyetle karşılıyoruz! Lütfen şu adımları izleyin:
-
-1. Projeyi forklayın
-2. Yeni bir feature branch'i oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
-5. Bir Pull Request oluşturun
-
-## 📄 Lisans
-
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
