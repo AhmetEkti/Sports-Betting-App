@@ -20,7 +20,7 @@ Betting Basket özelliği, kullanıcıların seçtikleri bahisleri yönetmelerin
 ### 🌟 Özellikler
 
 - Sepete bahis ekleme ve çıkarma
-- Toplam maç sayısı, toplam oran ve potansiyel kazanç hesaplamaları
+- Toplam maç sayısı, toplam oran
 - Analitik olaylarını kaydetme
 
 ### 📊 Analitikler
