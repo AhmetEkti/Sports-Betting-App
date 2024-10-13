@@ -112,3 +112,17 @@ Sepetteki bahisler, swipe action kullanılarak kolayca silinebilir.
 
 ![Sepet swipe action örneği](images/swipe-action.PNG)
 
+
+### Çoklu Dil Desteği
+Bu proje şu anda Türkçe ve İngilizce dillerini desteklemektedir. Bu özellik, kullanıcılarımızın uygulamayı kendi tercih ettikleri dilde kullanmalarına olanak sağlar.
+Desteklenen Diller
+
+Türkçe (TR)
+İngilizce (EN)
+
+Dil Desteğinin Genişletilmesi
+Projemiz, soldan sağa yazılan diğer dillerin de kolayca eklenmesine olanak tanıyacak şekilde tasarlanmıştır.
+
+![Çoklu dil desteği örneği](images/multi-languages.PNG)
+
+Yukarıdaki görsel, uygulamanın dil seçeneklerini göstermektedir.
