@@ -9,11 +9,16 @@ import UIKit
 import Combine
 
 class BettingBasketViewController: UIViewController {
+    
+    // MARK: - Properties
+    
     @IBOutlet weak var tableView: UITableView!
     
     private let viewModel = BettingBasketViewModel.shared
     private var cancellables = Set<AnyCancellable>()
     private let emptyStateView = EmptyStateView(frame: .zero)
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,23 +27,36 @@ class BettingBasketViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
         updateEmptyState()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         AnalyticsLogger.shared.logBasketViewed()
     }
     
+    // MARK: - UI Setup
+    
     private func setupUI() {
+        setupTableView()
+        setupEmptyStateView()
+    }
+    
+    func settupTabbar() {
+        
+    }
+    
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
         tableView.register(UINib(nibName: "BasketItemTableViewCell", bundle: nil), forCellReuseIdentifier: "BasketItemTableViewCell")
-        
-        emptyStateView.setMessage("Kuponunda hiç maç bulunmuyor.", symbolName: "ticket")
+    }
+    
+    private func setupEmptyStateView() {
+        emptyStateView.setMessage(L10n.BettingBasket.noBetsFound.localized, image: Theme.Images.ticket)
         tableView.backgroundView = emptyStateView
         emptyStateView.isHidden = true
         
@@ -51,14 +69,13 @@ class BettingBasketViewController: UIViewController {
         ])
     }
     
-    
+    // MARK: - Binding
     
     private func bindViewModel() {
         viewModel.$basket
             .receive(on: DispatchQueue.main)
             .sink { [weak self] basket in
                 guard let self = self else { return }
-                print("Basket updated in BettingBasketViewController. Total items: \(basket.items.count)")
                 self.tableView.reloadData()
                 self.updateEmptyState()
             }
@@ -68,12 +85,13 @@ class BettingBasketViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
                 guard let self = self else { return }
-                print("Item removed from basket")
                 self.tableView.reloadData()
                 self.updateEmptyState()
             }
             .store(in: &cancellables)
     }
+    
+    // MARK: - Helper Methods
     
     private func updateEmptyState() {
         emptyStateView.isHidden = !viewModel.basket.items.isEmpty
@@ -84,11 +102,11 @@ class BettingBasketViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
 extension BettingBasketViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = viewModel.basket.items.count
-        print("numberOfRowsInSection called. Returning count: \(count)")
-        return count
+        return viewModel.basket.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,7 +115,9 @@ extension BettingBasketViewController: UITableViewDataSource, UITableViewDelegat
         }
         
         let basketItem = viewModel.basket.items[indexPath.row]
-        cell.configure(with: basketItem) { [weak self] in
+        let cellViewModel = BasketItemCellViewModel(basketItem: basketItem)
+        
+        cell.configure(with: cellViewModel) { [weak self] in
             self?.removeItem(at: indexPath.row)
         }
         
@@ -111,6 +131,6 @@ extension BettingBasketViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-        return "Sil"
+        return L10n.General.remove.localized
     }
 }

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Uf-hQ-wfS">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Betting Basket View Controller-->
+        <scene sceneID="NDs-Q8-5oa">
+            <objects>
+                <viewController storyboardIdentifier="BettingBasketViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nfh-L7-7xv" customClass="BettingBasketViewController" customModule="Sports_Betting_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCd-zr-Xfn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1k4-gt-sfo">
+                                <rect key="frame" x="0.0" y="123" width="393" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PFb-85-ym1"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="1k4-gt-sfo" firstAttribute="top" secondItem="PFb-85-ym1" secondAttribute="top" constant="20" id="CgT-kf-JfP"/>
+                            <constraint firstAttribute="trailing" secondItem="1k4-gt-sfo" secondAttribute="trailing" id="IJx-7F-Lkv"/>
+                            <constraint firstAttribute="bottom" secondItem="1k4-gt-sfo" secondAttribute="bottom" id="R66-Cr-cMX"/>
+                            <constraint firstItem="1k4-gt-sfo" firstAttribute="leading" secondItem="PFb-85-ym1" secondAttribute="leading" id="tZI-KS-lST"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WkH-pC-Bhb">
+                        <barButtonItem key="leftBarButtonItem" image="HeaderLogo" landscapeImage="HeaderLogo" largeContentSizeImage="HeaderLogo" style="plain" id="hC2-M3-pzZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="1k4-gt-sfo" id="LvW-Oe-a64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5E-t3-XpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="389"/>
+        </scene>
+        <!--Betting Dashboard View Controller-->
+        <scene sceneID="yli-ZF-MO7">
+            <objects>
+                <viewController storyboardIdentifier="BettingDashboardViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HRC-BW-Sgq" customClass="BettingDashboardViewController" customModule="Sports_Betting_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9dC-Xj-tIi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ccx-yl-KoV">
+                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-wd-vSD">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HRC-BW-Sgq" id="aex-GV-Aqn"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HLp-hY-D9K"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="vU5-wd-vSD" firstAttribute="top" secondItem="HLp-hY-D9K" secondAttribute="top" id="JV4-ST-yUx"/>
+                            <constraint firstAttribute="trailing" secondItem="ccx-yl-KoV" secondAttribute="trailing" id="Zdb-hu-2Lm"/>
+                            <constraint firstItem="ccx-yl-KoV" firstAttribute="leading" secondItem="HLp-hY-D9K" secondAttribute="leading" id="cDh-QV-E7a"/>
+                            <constraint firstItem="ccx-yl-KoV" firstAttribute="top" secondItem="vU5-wd-vSD" secondAttribute="bottom" id="cS4-eu-jLK"/>
+                            <constraint firstItem="vU5-wd-vSD" firstAttribute="trailing" secondItem="HLp-hY-D9K" secondAttribute="trailing" id="d5x-IH-npB"/>
+                            <constraint firstAttribute="bottom" secondItem="ccx-yl-KoV" secondAttribute="bottom" id="hgg-Nf-yG9"/>
+                            <constraint firstItem="vU5-wd-vSD" firstAttribute="leading" secondItem="HLp-hY-D9K" secondAttribute="leading" id="pXw-Kz-3BT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZsO-BT-RkD">
+                        <barButtonItem key="leftBarButtonItem" image="HeaderLogo" landscapeImage="HeaderLogo" largeContentSizeImage="HeaderLogo" style="plain" id="nfD-B2-1fg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="vU5-wd-vSD" id="H1a-kF-aF7"/>
+                        <outlet property="tableView" destination="ccx-yl-KoV" id="RYK-aT-RAD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGt-Kb-QZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.59541984732823" y="-479.57746478873241"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DAP-s6-RVg">
+            <objects>
+                <tabBarController useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Uf-hQ-wfS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9ah-3V-P80">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sdV-fE-0Zn" kind="relationship" relationship="viewControllers" id="QMo-61-RLm"/>
+                        <segue destination="Lhv-qa-P5j" kind="relationship" relationship="viewControllers" id="rAR-kK-4dg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzN-oX-flC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1069" y="-176"/>
+        </scene>
+        <!--Bülten-->
+        <scene sceneID="YxN-cQ-UQd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sdV-fE-0Zn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bülten" image="BettingList" id="cjh-oT-oKL">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bln-W3-VF5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HRC-BW-Sgq" kind="relationship" relationship="rootViewController" id="UdB-NX-uvz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjf-LU-iSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164.12213740458014" y="-479.57746478873241"/>
+        </scene>
+        <!--0 Maç - 0.0 Oran-->
+        <scene sceneID="yOO-et-aLm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lhv-qa-P5j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="0 Maç - 0.0 Oran" image="soccerball" catalog="system" id="uRc-al-BID">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zz9-iN-JFM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nfh-L7-7xv" kind="relationship" relationship="rootViewController" id="Zw5-0z-6R5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Pd-VN-qBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BettingList" width="30" height="30"/>
+        <image name="HeaderLogo" width="397.66665649414062" height="128"/>
+        <image name="soccerball" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46666666666666667" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

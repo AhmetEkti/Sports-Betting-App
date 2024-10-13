@@ -9,23 +9,17 @@ import Foundation
 
 class BettingEventCellViewModel {
     let event: BettingEvent
-    private let dateFormatter: DateFormatter
-    
-    var shouldHighlight: Bool = false
+    let shouldHighlight: Bool
+    let odds: (homeOutcome: Outcome?, drawOutcome: Outcome?, awayOutcome: Outcome?)
     
     init(event: BettingEvent, previousEvent: BettingEvent?) {
         self.event = event
-        self.dateFormatter = DateFormatter()
-        self.dateFormatter.locale = Locale(identifier: "tr_TR")
-        self.dateFormatter.timeZone = TimeZone(identifier: "Europe/Istanbul")
-        
         self.shouldHighlight = Self.checkShouldHighlight(currentEvent: event, previousEvent: previousEvent)
+        self.odds = Self.extractOdds(from: event)
     }
     
     private static func checkShouldHighlight(currentEvent: BettingEvent, previousEvent: BettingEvent?) -> Bool {
-        guard let previousEvent = previousEvent else {
-            return false
-        }
+        guard let previousEvent = previousEvent else { return false }
         
         let currentDate = currentEvent.commenceTimeDate
         let previousDate = previousEvent.commenceTimeDate
@@ -34,60 +28,49 @@ class BettingEventCellViewModel {
         currentEvent.sportKey == previousEvent.sportKey
     }
     
-    var sportTitle: String {
-        return event.sportTitle
-    }
-    
-    var formattedDate: String {
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        guard let date = dateFormatter.date(from: event.commenceTime) else {
-            return "Geçersiz tarih"
-        }
-        
-        let calendar = Calendar.current
-        if calendar.isDateInToday(date) {
-            dateFormatter.dateFormat = "HH:mm"
-            return "Bugün \(dateFormatter.string(from: date))"
-        } else {
-            dateFormatter.dateFormat = "d MMMM HH:mm"
-            return dateFormatter.string(from: date)
-        }
-    }
-    
-    var eventTitle: String {
-        return "\(event.homeTeam) - \(event.awayTeam)"
-    }
-    
-    var odds: (homeOutcome: Outcome?, drawOutcome: Outcome?, awayOutcome: Outcome?) {
+    private static func extractOdds(from event: BettingEvent) -> (Outcome?, Outcome?, Outcome?) {
         guard let bookmaker = event.bookmakers.first,
-              let market = bookmaker.markets.first(where: { $0.key == "h2h" }) else {
+              let market = bookmaker.markets.first(where: { $0.key == ConfigurationManager.shared.marketType }) else {
             return (nil, nil, nil)
         }
         
-        var homeOutcome: Outcome?
-        var awayOutcome: Outcome?
-        var drawOutcome: Outcome?
-        
-        for outcome in market.outcomes {
-            switch outcome.name {
-            case event.homeTeam:
-                homeOutcome = outcome
-            case event.awayTeam:
-                awayOutcome = outcome
-            case "Draw":
-                drawOutcome = outcome
-            default:
-                break
-            }
-        }
+        let homeOutcome = market.outcomes.first { $0.name == event.homeTeam }
+        let awayOutcome = market.outcomes.first { $0.name == event.awayTeam }
+        let drawOutcome = market.outcomes.first { $0.name == event.draw }
         
         return (homeOutcome, drawOutcome, awayOutcome)
     }
-}
-
-extension Date {
-    func isInSameDay(as date: Date?) -> Bool {
-        guard let otherDate = date else { return false }
-        return Calendar.current.isDate(self, inSameDayAs: otherDate)
+    
+    var sportTitle: String {
+        return L10n.BetTypes.sportTitle(event.sportTitle)
+    }
+    
+    var formattedDate: String {
+        guard let date = event.commenceTimeDate else {
+            return L10n.General.invalidDate.localized
+        }
+        return L10n.General.formattedDate(date: date)
+    }
+    
+    var eventTitle: String {
+        return L10n.BetTypes.eventTitle(event.homeTeam, event.awayTeam)
+    }
+    
+    func outcomeInfo(for type: BettingOutcome) -> (isAvailable: Bool, price: String, text: String) {
+        let outcome: Outcome?
+        switch type {
+        case .homeWin:
+            outcome = odds.homeOutcome
+        case .draw:
+            outcome = odds.drawOutcome
+        case .awayWin:
+            outcome = odds.awayOutcome
+        }
+        
+        let isAvailable = outcome != nil
+        let price = L10n.BetTypes.price(outcome?.price ?? 0)
+        let text = L10n.BetTypes.marketType(type.code)
+        
+        return (isAvailable, price, text)
     }
 }

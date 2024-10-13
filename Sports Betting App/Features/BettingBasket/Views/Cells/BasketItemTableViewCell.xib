@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -19,13 +20,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beşiktaş - Galatasaray" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-51-axX">
-                        <rect key="frame" x="16" y="16" width="170" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-51-axX">
+                        <rect key="frame" x="16" y="16" width="24" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Maç Sonucu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-Cm-OdA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-Cm-OdA">
                         <rect key="frame" x="16" y="44" width="69.666666666666657" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="RatioBackground"/>
@@ -46,7 +47,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Km9-cF-N6l">
                         <rect key="frame" x="16" y="60" width="108" height="21"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MS 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Ar-E73">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Ar-E73">
                                 <rect key="frame" x="0.0" y="0.0" width="54" height="21"/>
                                 <color key="backgroundColor" name="RatioBasketBackground"/>
                                 <constraints>
@@ -57,7 +58,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owS-mD-xan">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owS-mD-xan">
                                 <rect key="frame" x="54" y="0.0" width="54" height="21"/>
                                 <color key="backgroundColor" name="SelectedRatio"/>
                                 <constraints>
@@ -80,8 +81,8 @@
                             <constraint firstItem="6DC-Ar-E73" firstAttribute="top" secondItem="Km9-cF-N6l" secondAttribute="top" id="yZR-Av-RIN"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-hN-yuO">
-                        <rect key="frame" x="273" y="66" width="31" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-hN-yuO">
+                        <rect key="frame" x="283.66666666666669" y="66" width="20.333333333333314" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="AccentColor"/>
                         <nil key="highlightedColor"/>
@@ -106,6 +107,7 @@
                 <outlet property="dateLabel" destination="pLv-hN-yuO" id="sJX-48-qd7"/>
                 <outlet property="eventTitleLabel" destination="dBl-51-axX" id="P8A-B9-KD6"/>
                 <outlet property="marketTypeLabel" destination="6DC-Ar-E73" id="qPY-1f-OBh"/>
+                <outlet property="matchResultLabel" destination="0fm-Cm-OdA" id="S8j-1M-bSm"/>
                 <outlet property="oddsLabel" destination="owS-mD-xan" id="Vgv-Yn-QpR"/>
                 <outlet property="oddsView" destination="Km9-cF-N6l" id="SpF-GB-wqF"/>
                 <outlet property="removeButton" destination="fj4-4V-vXK" id="ebG-Y2-fFx"/>
@@ -116,7 +118,7 @@
     <resources>
         <image name="trash" catalog="system" width="117" height="128"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46666666666666667" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Border">
             <color red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

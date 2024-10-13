@@ -69,37 +69,26 @@ class BettingEventTableViewCell: UITableViewCell {
     }
     
     func configure(with viewModel: BettingEventCellViewModel, isSelected: (String) -> Bool) {
-        
         self.viewModel = viewModel
         
         dateLabel.text = viewModel.formattedDate
         sportTitleLabel.text = viewModel.sportTitle
         eventTitleLabel.text = viewModel.eventTitle
         
+        let homeWinInfo = viewModel.outcomeInfo(for: .homeWin)
+        homeWinView.isHidden = !homeWinInfo.isAvailable
+        homeWinOddsLabel.text = homeWinInfo.price
+        homeWinLabel.text = homeWinInfo.text
         
-        if let homeOutcome = viewModel.odds.homeOutcome {
-            homeWinView.isHidden = false
-            homeWinOddsLabel.text = "\(homeOutcome.price)"
-            homeWinLabel.text = "MS 1"
-        }
+        let drawInfo = viewModel.outcomeInfo(for: .draw)
+        drawView.isHidden = !drawInfo.isAvailable
+        drawOddsLabel.text = drawInfo.price
+        drawLabel.text = drawInfo.text
         
-        if let drawOutcome = viewModel.odds.drawOutcome {
-            drawView.isHidden = false
-            drawOddsLabel.text = "\(drawOutcome.price)"
-            drawLabel.text = "MS X"
-        }else{
-            drawView.isHidden = true
-        }
-        
-        
-        if let awayOutcome = viewModel.odds.awayOutcome {
-            awayWinView.isHidden = false
-            awayWinOddsLabel.text = "\(awayOutcome.price)"
-            awayWinLabel.text = "MS 2"
-        }else{
-            awayWinView.isHidden = true
-        }
-        
+        let awayWinInfo = viewModel.outcomeInfo(for: .awayWin)
+        awayWinView.isHidden = !awayWinInfo.isAvailable
+        awayWinOddsLabel.text = awayWinInfo.price
+        awayWinLabel.text = awayWinInfo.text
         
         updateStackViewDistribution()
         
@@ -119,9 +108,9 @@ class BettingEventTableViewCell: UITableViewCell {
     }
     
     private func updateSelectionState(isSelected: (String) -> Bool) {
-        updateOutcomeView(homeWinView,oddsLabel: homeWinOddsLabel,textLabel: homeWinLabel, isSelected: isSelected("MS 1"))
-        updateOutcomeView(drawView,oddsLabel: drawOddsLabel,textLabel: drawLabel, isSelected: isSelected("MS X"))
-        updateOutcomeView(awayWinView,oddsLabel: awayWinOddsLabel,textLabel: awayWinLabel, isSelected: isSelected("MS 2"))
+        updateOutcomeView(homeWinView,oddsLabel: homeWinOddsLabel,textLabel: homeWinLabel, isSelected: isSelected(BettingOutcome.homeWin.code))
+        updateOutcomeView(drawView,oddsLabel: drawOddsLabel,textLabel: drawLabel, isSelected: isSelected(BettingOutcome.draw.code))
+        updateOutcomeView(awayWinView,oddsLabel: awayWinOddsLabel,textLabel: awayWinLabel, isSelected: isSelected(BettingOutcome.awayWin.code))
     }
     
     private func updateOutcomeView(_ view: UIView, oddsLabel : UILabel, textLabel : UILabel , isSelected: Bool) {
@@ -176,18 +165,18 @@ class BettingEventTableViewCell: UITableViewCell {
     @objc private func homeWinTapped() {
         guard let viewModel = viewModel,
               let outcome = viewModel.odds.homeOutcome else { return }
-        addToBasketHandler?(viewModel.event, outcome, "MS 1")
+        addToBasketHandler?(viewModel.event, outcome, BettingOutcome.homeWin.code)
     }
     
     @objc private func drawTapped() {
         guard let viewModel = viewModel,
               let outcome = viewModel.odds.drawOutcome else { return }
-        addToBasketHandler?(viewModel.event, outcome, "MS X")
+        addToBasketHandler?(viewModel.event, outcome, BettingOutcome.draw.code)
     }
     
     @objc private func awayWinTapped() {
         guard let viewModel = viewModel,
               let outcome = viewModel.odds.awayOutcome else { return }
-        addToBasketHandler?(viewModel.event, outcome, "MS 2")
+        addToBasketHandler?(viewModel.event, outcome, BettingOutcome.awayWin.code)
     }
 }

@@ -212,8 +212,8 @@
 			developmentRegion = tr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				Base,
 				tr,
+				en,
 			);
 			mainGroup = F988AC612CB1AC7900200B02;
 			minimizedProjectReferenceProxies = 1;

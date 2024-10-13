@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Uf-hQ-wfS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -57,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Takım, Lig Ara" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-wd-vSD">
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="   " translatesAutoresizingMaskIntoConstraints="NO" id="vU5-wd-vSD">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -164,7 +165,7 @@
         <image name="HeaderLogo" width="397.66665649414062" height="128"/>
         <image name="soccerball" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46666666666666667" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
