@@ -58,8 +58,8 @@ class EmptyStateView: UIView {
         ])
     }
     
-    func setMessage(_ message: String, symbolName: String) {
+    func setMessage(_ message: String, image: UIImage) {
         messageLabel.text = message
-        symbolImageView.image = UIImage(systemName: symbolName)?.withRenderingMode(.alwaysTemplate)
+        symbolImageView.image = image
     }
 }
