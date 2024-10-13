@@ -7,12 +7,10 @@
 
 import Foundation
 
-struct Market: Codable, Identifiable {
+struct Market: Codable {
     let key: String
     let lastUpdate: String
     let outcomes: [Outcome]
-    
-    var id: String { key }
     
     enum CodingKeys: String, CodingKey {
         case key
