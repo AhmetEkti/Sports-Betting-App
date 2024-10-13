@@ -8,10 +8,10 @@
 import Foundation
 
 struct BetsListRequest: APIRequestProtocol {
-    let regions: String
-    let markets: String
+    let regions: String = ConfigurationManager.shared.marketArea
+    let markets: String = ConfigurationManager.shared.marketType
     
-    var method: String { "GET" }
+    var method: HTTPMethod { .get }
     var path: String { "/v4/sports/upcoming/odds" }
     var parameters: [String: Any]? {
         var params: [String: Any] = [

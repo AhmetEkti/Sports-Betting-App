@@ -23,7 +23,7 @@ class BettingDashboardViewModel {
     
     func fetchBettingEvents() {
         isLoading = true
-        let request = BetsListRequest(regions: "eu", markets: "h2h")
+        let request = BetsListRequest()
         
         networkManager.request(request)
             .receive(on: DispatchQueue.main)
@@ -32,13 +32,11 @@ class BettingDashboardViewModel {
                 switch completion {
                 case .failure(let error):
                     self?.errorMessage = error.errorDescription
-                    print("Error fetching betting events: \(error.errorDescription)")
                 case .finished:
                     print("Betting events fetch completed")
                 }
             } receiveValue: { [weak self] (response: BettingResponse) in
                 self?.processBettingEvents(response)
-                print("Received \(response.count) betting events")
             }
             .store(in: &cancellables)
     }
