@@ -7,9 +7,7 @@
 
 import Foundation
 
-struct Outcome: Codable, Identifiable {
+struct Outcome: Codable {
     let name: String
     let price: Double
-    
-    var id: String { name }
 }
