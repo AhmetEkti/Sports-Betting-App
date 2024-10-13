@@ -14,6 +14,7 @@ struct BettingEvent: Codable, Identifiable {
     let commenceTime: String
     let homeTeam: String
     let awayTeam: String
+    let draw: String = "Draw"
     let bookmakers: [Bookmaker]
     
     enum CodingKeys: String, CodingKey {
@@ -23,13 +24,13 @@ struct BettingEvent: Codable, Identifiable {
         case commenceTime = "commence_time"
         case homeTeam = "home_team"
         case awayTeam = "away_team"
+        case draw = "draw"
         case bookmakers
     }
 }
 
 extension BettingEvent {
     var commenceTimeDate: Date? {
-        let formatter = ISO8601DateFormatter()
-        return formatter.date(from: commenceTime)
+        return commenceTime.iso8601Date
     }
 }
