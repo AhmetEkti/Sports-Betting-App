@@ -15,8 +15,6 @@ class TrackingPermissionManager {
     
     func requestTrackingPermission(completion: @escaping (Bool) -> Void) {
         if #available(iOS 14.5, *) {
-            let currentStatus = ATTrackingManager.trackingAuthorizationStatus
-            
             ATTrackingManager.requestTrackingAuthorization { status in
                 DispatchQueue.main.async {
                     switch status {
