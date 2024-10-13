@@ -19,7 +19,9 @@ enum Theme {
     }
     
     enum Images {
-          static let headerLogo = UIImage(named: "HeaderLogo")!
-          static let BettingList = UIImage(named: "BettingList")!
-      }
+        static let headerLogo = UIImage(named: "HeaderLogo")!
+        static let BettingList = UIImage(named: "BettingList")!
+        static let ticket = UIImage(systemName: "ticket")!.withRenderingMode(.alwaysTemplate)
+        static let magnifyingglass = UIImage(systemName: "magnifyingglass")!.withRenderingMode(.alwaysTemplate)
+    }
 }
