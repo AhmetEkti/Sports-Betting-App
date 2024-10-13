@@ -4,5 +4,28 @@
 <dict>
 	<key>APIKey</key>
 	<string>6ce7285e9d98493c88eea25085015330</string>
+	<key>BettingOutcomes</key>
+	<dict>
+		<key>HomeWin</key>
+		<string>MS 1</string>
+		<key>Draw</key>
+		<string>MS X</string>
+		<key>AwayWin</key>
+		<string>MS 2</string>
+	</dict>
+	<key>Formats</key>
+	<dict>
+		<key>Date</key>
+		<dict>
+			<key>Today</key>
+			<string>HH:mm</string>
+			<key>Other</key>
+			<string>d MMMM HH:mm</string>
+		</dict>
+	</dict>
+	<key>MarketType</key>
+	<string>h2h</string>
+	<key>MarketArea</key>
+	<string>eu</string>
 </dict>
 </plist>
