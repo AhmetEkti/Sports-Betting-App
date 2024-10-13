@@ -14,8 +14,9 @@ Betting Basket özelliği, kullanıcıların seçtikleri bahisleri yönetmelerin
 ### 🧩 Bileşenler
 
 - **Modeller**: `Basket`, `BasketItem`
-- **ViewModel**: `BettingBasketViewModel`
-- **Views**: `BasketItemTableViewCell`, `BettingBasketViewController`
+- **ViewModels**: `BettingBasketViewModel` , `BasketItemCellViewModel`
+- **Views**: `BasketItemTableViewCell` , `BasketItemTableViewCell.xib` 
+- **View Controller**: `BettingBasketViewController`
 
 ### 🌟 Özellikler
 
@@ -37,8 +38,9 @@ Betting Dashboard özelliği, kullanıcılara mevcut bahis etkinliklerini göste
 ### 🧩 Bileşenler
 
 - **API İstekleri**: `BetsListRequest`
+- **Modeller**: `BettingResponse`, `BettingEvent`, `Bookmaker`, `Market`, `Outcome`
 - **ViewModels**: `BettingDashboardViewModel`, `BettingEventCellViewModel`
-- **Views**: `BettingEventTableViewCell`
+- **Views**: `BettingEventTableViewCell` , `BettingEventTableViewCell.xib`
 - **View Controller**: `BettingDashboardViewController`
 
 ### 🌟 Özellikler
@@ -55,3 +57,4 @@ Betting Dashboard özelliği, kullanıcılara mevcut bahis etkinliklerini göste
 - Bahis güncelleme
 - Sepet güncelleme
 
+Bu Features modülü, Sports Betting App'in ana işlevselliğini oluşturur ve kullanıcıların bahis etkinliklerini görüntülemelerini, bahis seçmelerini ve seçtikleri bahisleri yönetmelerini sağlar.

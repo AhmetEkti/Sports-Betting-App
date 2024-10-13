@@ -10,6 +10,7 @@ Bu modül, Sports Betting App'in temel bileşenlerini içerir. Bu bileşenler, u
 4. [🌐 Networking](#-networking)
 5. [🔐 Security](#-security)
 6. [🎨 Theme](#-theme)
+7. [📜 Localization](#-localization)
 
 ## 📊 Analytics
 
@@ -70,6 +71,7 @@ Bu modül, uygulamanın ağ işlemlerini ve API yapılandırmasını yönetir.
 
 ### 🧩 Bileşenler
 
+- `Protocols/APIRequestProtocol`: API isteklerini standartlaştıran protokol
 - `APIConfiguration`: API anahtarı yönetimi ve ortam yapılandırması için kullanılan singleton sınıf
 - `Environment`: Uygulama ortamlarını tanımlayan enum
 - `NetworkError`: Ağ işlemleri sırasında oluşabilecek hataları tanımlayan enum
@@ -97,10 +99,38 @@ Bu modül, uygulamanın görsel temasını tanımlayan bileşenleri içerir ve t
 
 - Merkezi renk paleti yönetimi
 - Görsel öğelerin merkezi yönetimi
-- Kolay özelleştirme ve genişletme imkanı
 
 ### 🧩 Bileşenler
 
 - `Theme`: Uygulamanın renk şemasını ve görsel öğelerini tanımlayan enum
 
 Bu Core modülü, Sports Betting App'in temelini oluşturur ve uygulamanın güvenli, tutarlı ve verimli çalışmasını sağlar. Her bir alt modül, belirli bir işlevsellik alanına odaklanarak, uygulamanın modüler ve bakımı kolay bir yapıya sahip olmasını sağlar.
+
+## 📜 Localization
+
+Bu modül, uygulamanın çoklu dil desteğini yönetir.
+
+### 🌟 Özellikler
+
+- Dinamik ve statik lokalizasyon anahtarları
+- Merkezi lokalizasyon yönetimi
+- Tarih formatlarının lokalizasyonu
+- Çoklu dil desteği
+
+### 🧩 Bileşenler
+
+- `LocalizationKey`: Lokalizasyon anahtarlarını tanımlayan protokol
+- `DynamicLocalizationKey`: Dinamik lokalizasyon anahtarlarını oluşturmak için kullanılan yapı
+- `L10n`: Lokalizasyon işlemlerini yöneten ana enum
+  - `General`: Genel kullanım için lokalizasyon anahtarları
+  - `BettingDashboard`: Bahis panosu için lokalizasyon anahtarları
+  - `BettingBasket`: Bahis sepeti için lokalizasyon anahtarları
+  - `Tabbar`: Tab bar için lokalizasyon anahtarları
+  - `BetTypes`: Bahis türleri için lokalizasyon anahtarları
+
+### 🚀 Özelleştirilmiş Fonksiyonlar
+
+- Tarih formatlaması için özel fonksiyonlar
+- Dinamik metin oluşturma için genişletilmiş fonksiyonlar (örneğin, takım isimleri, bahis oranları)
+
+Bu modül, uygulamanın tüm metin içeriklerinin farklı dillerde sunulmasını sağlar ve kullanıcı deneyimini kişiselleştirir. Ayrıca, dinamik içerik oluşturma yeteneği ile esnek bir lokalizasyon altyapısı sunar.

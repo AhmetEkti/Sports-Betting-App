@@ -38,7 +38,6 @@ Proje, aşağıdaki ana bileşenleri içerir:
 - `Features`: Ana uygulama özellikleri
 - `Extensions`: Swift sınıfları için ek işlevsellik
 - `Resources`: Varlıklar ve yapılandırma dosyaları
-- `Utilities`: Yardımcı işlevler ve araçlar
 
 ## 📚 Modüller
 
@@ -47,7 +46,6 @@ Proje, aşağıdaki ana modüllere ayrılmıştır:
 - [Core](./Sports%20Betting%20App/Core/README+Core.md)
 - [Features](./Sports%20Betting%20App/Features/README+Features.md)
 - [Extensions](./Sports%20Betting%20App/Extensions/README+Extensions.md)
-- [Utilities](./Sports%20Betting%20App/Utilities/README+Utilities.md)
 
 Her modülün kendi README dosyası, ilgili bileşenlerin ayrıntılı açıklamalarını içerir.
 

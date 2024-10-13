@@ -1,23 +1,21 @@
 # 🧩 Extensions
 
-Bu klasör, Sports Betting App'in çeşitli Swift sınıflarına ve yapılarına ek işlevsellik kazandıran extension'ları içerir. Bu extension'lar, kodun daha temiz, daha okunabilir ve daha yeniden kullanılabilir olmasına yardımcı olur.
+Bu klasör, Sports Betting App'in çeşitli Swift sınıflarına ve yapılarına ek işlevsellik kazandıran extension'ları içerir.
 
 ## 📚 İçindekiler
 
-- [URLSession+Extensions](#urlsessionextensions)
+-  Date+Extensions
 
-## URLSession+Extensions
+## Date+Extensions
 
-Bu extension, `URLSession` sınıfına Combine framework'ü kullanarak network isteklerini daha kolay yönetmek için bir yardımcı method ekler.
+Bu extension, `Date`, `DateFormatter`, `String` sınıflarına tarih alanlarında ek işlevsellik ekler.
 
 ### 🌟 Özellikler
 
-- Hata yönetimi
-- Jenerik tip desteği ile farklı response tiplerini destekler
+- İki tarihin aynı günde olup olmadığını kontrol etme
+- Tarihin "bugün" olup olmadığını kontrol etme
+- Belirli bir formata göre tarihi string'e çevirme
+- String'den belirli bir formata göre tarih oluşturma
+- ISO8601 formatındaki string'i `Date` nesnesine çevirme
 
-### 🔍 Nasıl Çalışır
-
-1. Verilen `URLRequest` için bir data task publisher oluşturur.
-2. HTTP yanıtını kontrol eder ve status code 200-299 aralığında değilse hata fırlatır.
-3. Yanıt verisini belirtilen `Decodable` tipe decode eder.
-4. Sonucu bir `AnyPublisher` olarak döndürür.
+Bu extension'lar, uygulama genelinde tarih işlemleri, formatlaması ve ayrıştırması için tutarlı ve kullanımı kolay bir yaklaşım sağlar.
