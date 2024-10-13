@@ -47,7 +47,6 @@ class BettingBasketViewModel {
     
     func removeFromBasket(at index: Int) {
         guard index >= 0 && index < basket.items.count else {
-            print("Attempted to remove item at invalid index: \(index)")
             return
         }
         basket.removeItem(at: index)
