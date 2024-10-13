@@ -7,16 +7,13 @@
 
 import Foundation
 
-struct Bookmaker: Codable, Identifiable {
-    let key: String
+struct Bookmaker: Codable {
     let title: String
     let lastUpdate: String
     let markets: [Market]
     
-    var id: String { key }
-    
     enum CodingKeys: String, CodingKey {
-        case key, title
+        case title
         case lastUpdate = "last_update"
         case markets
     }
