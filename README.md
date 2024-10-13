@@ -15,11 +15,12 @@ Bu proje, spor bahis uygulaması için geliştirilen bir seviye testi çalışma
 
 ## 🌟 Özellikler 
 
+- Çoklu dil desteği
 - Reaktif programlama ile güçlendirilmiş kullanıcı arayüzü
 - Gerçek zamanlı bahis oranları ve etkinlik güncellemeleri
 - Kişiselleştirilmiş bahis sepeti yönetimi
 - Google Analytics ile kullanıcı davranışı takibi
-  
+
 ## 🛠 Teknolojiler
 
 - Swift 5
@@ -84,7 +85,7 @@ Bahis oranları ve etkinlik bilgileri [The Odds API](https://the-odds-api.com/) 
 ### Google Analytics
 
 Kullanıcı davranışları ve uygulama içi etkileşimler, Google Analytics kullanılarak takip edilmektedir. Önemli olaylar ve kullanıcı aksiyonları özel olarak izlenmektedir.
-Aşağıdaki ekran görüntüsünde, Google Analytics web arayüzünde uygulamaya ait verilerin nasıl göründüğünü görebilirsiniz:
+Aşağıdaki ekran görüntüsünde uygulamaya ait verilerin nasıl göründüğünü görebilirsiniz:
 
 ![Google Analytics entegrasyon ekran görüntüsü](images/analytics.png)
 
@@ -115,12 +116,14 @@ Sepetteki bahisler, swipe action kullanılarak kolayca silinebilir.
 
 ### Çoklu Dil Desteği
 Bu proje şu anda Türkçe ve İngilizce dillerini desteklemektedir. Bu özellik, kullanıcılarımızın uygulamayı kendi tercih ettikleri dilde kullanmalarına olanak sağlar.
+
 Desteklenen Diller
 
 Türkçe (TR)
 İngilizce (EN)
 
 Dil Desteğinin Genişletilmesi
+
 Projemiz, soldan sağa yazılan diğer dillerin de kolayca eklenmesine olanak tanıyacak şekilde tasarlanmıştır.
 
 ![Çoklu dil desteği örneği](images/multi-languages.PNG)
