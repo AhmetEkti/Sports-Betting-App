@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="   " translatesAutoresizingMaskIntoConstraints="NO" id="vU5-wd-vSD">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="   " translatesAutoresizingMaskIntoConstraints="NO" id="vU5-wd-vSD">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <textInputTraits key="textInputTraits"/>

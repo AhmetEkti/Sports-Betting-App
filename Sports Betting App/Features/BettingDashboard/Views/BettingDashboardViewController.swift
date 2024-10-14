@@ -31,7 +31,6 @@ class BettingDashboardViewController: UIViewController {
         bindViewModel()
         bindBasketViewModel()
         viewModel.fetchBettingEvents()
-        setupTapGesture()
     }
     
     // MARK: - UI Setup
@@ -42,12 +41,12 @@ class BettingDashboardViewController: UIViewController {
         setupRefreshControl()
         setupSearchBar()
         setupEmptyStateView()
+        setupKeyboardDismissal()
     }
     
     func setupTabbar() {
         guard let tabBarItem = self.tabBarController?.tabBar.items?[0] else { return }
         tabBarItem.title = L10n.Tabbar.bettingList.localized
-        updateTabBarItem()
     }
     
     private func setupTableView() {
@@ -70,10 +69,6 @@ class BettingDashboardViewController: UIViewController {
     }
     
     private func customizeSearchBar() {
-        searchBar.backgroundColor = Theme.Colors.navigationBarBackground
-        searchBar.searchBarStyle = .minimal
-        searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-        
         if let textField = searchBar.value(forKey: "searchField") as? UITextField {
             textField.backgroundColor = .white
             textField.textColor = .black
@@ -82,8 +77,6 @@ class BettingDashboardViewController: UIViewController {
                 placeholderLabel.textColor = .darkGray
             }
         }
-        
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
     }
     
     private func setupEmptyStateView() {
@@ -99,7 +92,7 @@ class BettingDashboardViewController: UIViewController {
         ])
     }
     
-    private func setupTapGesture() {
+    private func setupKeyboardDismissal() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
@@ -112,7 +105,6 @@ class BettingDashboardViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.tableView.reloadData()
-                self?.refreshControl.endRefreshing()
             }
             .store(in: &cancellables)
         
@@ -139,7 +131,7 @@ class BettingDashboardViewController: UIViewController {
     }
     
     private func bindBasketViewModel() {
-        basketViewModel.itemRemovedPublisher
+        basketViewModel.basket.$items
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.tableView.reloadData()
@@ -200,6 +192,7 @@ extension BettingDashboardViewController: UITableViewDataSource, UITableViewDele
         }
         
         let cellViewModel = viewModel.filteredBettingEvents[indexPath.row]
+        
         cell.configure(with: cellViewModel) { [weak self] marketType in
             guard let self = self else { return false }
             return self.basketViewModel.isOutcomeSelected(event: cellViewModel.event, marketType: marketType)
@@ -208,8 +201,6 @@ extension BettingDashboardViewController: UITableViewDataSource, UITableViewDele
         cell.addToBasketHandler = { [weak self] (event, outcome, marketType) in
             DispatchQueue.main.async {
                 self?.basketViewModel.addToBasket(event: event, outcome: outcome, marketType: marketType)
-                self?.updateTabBarItem()
-                self?.tableView.reloadRows(at: [indexPath], with: .none)
             }
         }
         return cell
@@ -222,11 +213,12 @@ extension BettingDashboardViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.filterEvents(with: searchText)
         updateEmptyState()
-        
-        AnalyticsLogger.shared.logSearch(query: searchText)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text, searchText != "" {
+            AnalyticsLogger.shared.logSearch(query: searchText)
+        }
         searchBar.resignFirstResponder()
     }
 }
