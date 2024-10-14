@@ -18,7 +18,6 @@ protocol APIRequestProtocol {
     var method: HTTPMethod { get }
     var path: String { get }
     var parameters: [String: Any]? { get }
-    func asURLRequest(baseURL: URL) throws -> URLRequest
 }
 
 extension APIRequestProtocol {
