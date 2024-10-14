@@ -9,9 +9,6 @@ import Foundation
 
 class Basket: ObservableObject {
     @Published var items: [BasketItem] = []
-    @Published var stake: Double = 30.0
-    @Published var systemBet: Int = 20
-    @Published var multipleTickets: Int = 1
     
     var totalMatches: Int {
         items.count
