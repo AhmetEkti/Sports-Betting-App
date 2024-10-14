@@ -18,29 +18,6 @@ class BettingEventCellViewModel {
         self.odds = Self.extractOdds(from: event)
     }
     
-    private static func checkShouldHighlight(currentEvent: BettingEvent, previousEvent: BettingEvent?) -> Bool {
-        guard let previousEvent = previousEvent else { return false }
-        
-        let currentDate = currentEvent.commenceTimeDate
-        let previousDate = previousEvent.commenceTimeDate
-        
-        return currentDate?.isInSameDay(as: previousDate) == true &&
-        currentEvent.sportKey == previousEvent.sportKey
-    }
-    
-    private static func extractOdds(from event: BettingEvent) -> (Outcome?, Outcome?, Outcome?) {
-        guard let bookmaker = event.bookmakers.first,
-              let market = bookmaker.markets.first(where: { $0.key == ConfigurationManager.shared.marketType }) else {
-            return (nil, nil, nil)
-        }
-        
-        let homeOutcome = market.outcomes.first { $0.name == event.homeTeam }
-        let awayOutcome = market.outcomes.first { $0.name == event.awayTeam }
-        let drawOutcome = market.outcomes.first { $0.name == event.draw }
-        
-        return (homeOutcome, drawOutcome, awayOutcome)
-    }
-    
     var sportTitle: String {
         return L10n.BetTypes.sportTitle(event.sportTitle)
     }
@@ -72,5 +49,28 @@ class BettingEventCellViewModel {
         let text = L10n.BetTypes.marketType(type.code)
         
         return (isAvailable, price, text)
+    }
+    
+    private static func checkShouldHighlight(currentEvent: BettingEvent, previousEvent: BettingEvent?) -> Bool {
+        guard let previousEvent = previousEvent else { return false }
+        
+        let currentDate = currentEvent.commenceTimeDate
+        let previousDate = previousEvent.commenceTimeDate
+        
+        return currentDate?.isInSameDay(as: previousDate) == true &&
+        currentEvent.sportKey == previousEvent.sportKey
+    }
+    
+    private static func extractOdds(from event: BettingEvent) -> (Outcome?, Outcome?, Outcome?) {
+        guard let bookmaker = event.bookmakers.first,
+              let market = bookmaker.markets.first(where: { $0.key == ConfigurationManager.shared.marketType }) else {
+            return (nil, nil, nil)
+        }
+        
+        let homeOutcome = market.outcomes.first { $0.name == event.homeTeam }
+        let awayOutcome = market.outcomes.first { $0.name == event.awayTeam }
+        let drawOutcome = market.outcomes.first { $0.name == event.draw }
+        
+        return (homeOutcome, drawOutcome, awayOutcome)
     }
 }
