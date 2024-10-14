@@ -126,13 +126,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No results found for %@ search."
+            "value" : "No results found for “%@” search."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ araması için \n Sonuç Bulunamadı."
+            "value" : "“%@” araması için \n Sonuç Bulunamadı."
           }
         }
       }
