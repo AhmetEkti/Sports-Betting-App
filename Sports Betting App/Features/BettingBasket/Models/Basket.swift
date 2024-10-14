@@ -20,11 +20,7 @@ class Basket: ObservableObject {
     var totalOdds: Double {
         items.reduce(1.0) { $0 * $1.selectedOutcome.price }
     }
-    
-    var potentialWin: Double {
-        stake * totalOdds
-    }
-    
+
     func addItem(_ item: BasketItem) {
         items.append(item)
     }
