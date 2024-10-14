@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class BettingDashboardViewModel {
-    @Published var bettingEvents: [BettingEventCellViewModel] = []
+    var bettingEvents: [BettingEventCellViewModel] = []
     @Published var filteredBettingEvents: [BettingEventCellViewModel] = []
     @Published var errorMessage: String?
     @Published var isLoading = false
