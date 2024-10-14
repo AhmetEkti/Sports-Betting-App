@@ -38,7 +38,6 @@ class BettingEventTableViewCell: UITableViewCell {
     var viewModel: BettingEventCellViewModel?
     var addToBasketHandler: ((BettingEvent, Outcome, String) -> Void)?
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -103,7 +102,7 @@ class BettingEventTableViewCell: UITableViewCell {
             headerViewTopConstraint.constant = 8.0
             headerViewBottomConstraint.constant = 4.0
         }
-        
+
         updateSelectionState(isSelected: isSelected)
     }
     
@@ -159,7 +158,6 @@ class BettingEventTableViewCell: UITableViewCell {
                 widthConstraints.append(constraint)
             }
         }
-        oddsStackView.layoutIfNeeded()
     }
     
     @objc private func homeWinTapped() {
