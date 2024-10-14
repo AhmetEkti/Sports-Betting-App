@@ -55,7 +55,6 @@ Bu modül, uygulamanın temel yapılandırma ve görünüm ayarlarını yönetir
 
 ### 🧩 Bileşenler
 
-- `AppearanceConfigurator`: Uygulamanın genel görünümünü yapılandırmak için kullanılan yapı
 - `ConfigurationManager`: Uygulama yapılandırma değerlerini yöneten singleton sınıf
 - `AppInitializer`: Uygulama başlatma işlemlerini yöneten sınıf
 

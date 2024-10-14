@@ -14,8 +14,6 @@ class AppInitializer {
     private init() {}
     
     func initialize(completion: @escaping () -> Void) {
-        AppearanceConfigurator.configure()
-
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             TrackingPermissionManager.shared.requestTrackingPermission { granted in
                 if granted {
