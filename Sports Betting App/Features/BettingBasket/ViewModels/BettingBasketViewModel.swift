@@ -12,8 +12,7 @@ import FirebaseAnalytics
 class BettingBasketViewModel {
     static let shared = BettingBasketViewModel()
     
-    @Published var basket: Basket = Basket()
-    let itemRemovedPublisher = PassthroughSubject<Void, Never>()
+    var basket: Basket = Basket()
     
     private init() {}
     
@@ -24,14 +23,11 @@ class BettingBasketViewModel {
             if existingItem.marketType == marketType {
                 let removedItem = BasketItem(event: event, selectedOutcome: outcome, marketType: marketType)
                 basket.removeItem(at: index)
-                
-                AnalyticsLogger.shared.logBasketViewed()
 
                 AnalyticsLogger.shared.logBetRemoved(eventId: removedItem.event.id, marketType: removedItem.marketType)
             } else {
                 let newItem = BasketItem(event: event, selectedOutcome: outcome, marketType: marketType)
                 basket.items[index] = newItem
-                
                 
                 AnalyticsLogger.shared.logBetUpdated(eventId: event.id, marketType: marketType, odds: outcome.price)
             }
@@ -50,7 +46,6 @@ class BettingBasketViewModel {
             return
         }
         basket.removeItem(at: index)
-        itemRemovedPublisher.send()
     }
     
     func isOutcomeSelected(event: BettingEvent, marketType: String) -> Bool {
