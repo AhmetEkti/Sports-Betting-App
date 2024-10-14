@@ -26,12 +26,6 @@ class BettingBasketViewController: UIViewController {
         bindViewModel()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-        updateEmptyState()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         AnalyticsLogger.shared.logBasketViewed()
@@ -43,11 +37,7 @@ class BettingBasketViewController: UIViewController {
         setupTableView()
         setupEmptyStateView()
     }
-    
-    func settupTabbar() {
-        
-    }
-    
+
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -72,18 +62,9 @@ class BettingBasketViewController: UIViewController {
     // MARK: - Binding
     
     private func bindViewModel() {
-        viewModel.$basket
+        viewModel.basket.$items
             .receive(on: DispatchQueue.main)
             .sink { [weak self] basket in
-                guard let self = self else { return }
-                self.tableView.reloadData()
-                self.updateEmptyState()
-            }
-            .store(in: &cancellables)
-        
-        viewModel.itemRemovedPublisher
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] in
                 guard let self = self else { return }
                 self.tableView.reloadData()
                 self.updateEmptyState()
