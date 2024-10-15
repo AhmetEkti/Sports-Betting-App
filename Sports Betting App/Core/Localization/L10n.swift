@@ -45,11 +45,7 @@ extension L10n.Tabbar {
 }
 
 extension L10n.General {
-    static func formattedDate(date: Date?) -> String {
-        guard let date = date else {
-            return NSLocalizedString(L10n.General.invalidDate.localized, comment: "")
-        }
-        
+    static func formattedDate(date: Date) -> String {
         if date.isToday {
             let format = ConfigurationManager.shared.dateFormat(for: "Today")
             let time = date.toString(format: format)
