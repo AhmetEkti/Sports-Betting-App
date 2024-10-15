@@ -114,7 +114,6 @@ class BettingDashboardViewController: UIViewController {
                 if let errorMessage = errorMessage {
                     self?.showAlert(message: errorMessage)
                 }
-                self?.refreshControl.endRefreshing()
             }
             .store(in: &cancellables)
         
@@ -203,6 +202,7 @@ extension BettingDashboardViewController: UITableViewDataSource, UITableViewDele
                 self?.basketViewModel.addToBasket(event: event, outcome: outcome, marketType: marketType)
             }
         }
+        
         return cell
     }
 }
