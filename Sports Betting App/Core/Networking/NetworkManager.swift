@@ -13,11 +13,9 @@ protocol NetworkManagerProtocol {
 }
 
 class NetworkManager: NetworkManagerProtocol {
-    private let session: URLSession
     private let configuration: APIConfiguration
     
-    init(session: URLSession = .shared, configuration: APIConfiguration = .shared) {
-        self.session = session
+    init(configuration: APIConfiguration = .shared) {
         self.configuration = configuration
     }
     
