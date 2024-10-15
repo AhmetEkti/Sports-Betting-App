@@ -11,7 +11,7 @@ enum Environment {
     case development
     case staging
     case production
-
+    
     var baseURL: URL {
         switch self {
         case .development:
@@ -22,14 +22,16 @@ enum Environment {
             return URL(string: "https://gateway-api.the-odds-api.com")!
         }
     }
-
+    
     static var current: Environment {
-        #if DEBUG
+        #if DEBUG_FLAG
         return .development
-        #elseif STAGING
+        #elseif STAGING_FLAG
         return .staging
-        #else
+        #elseif PRODUCTION_FLAG
         return .production
+        #else
+        fatalError("No environment flag set")
         #endif
     }
 }
