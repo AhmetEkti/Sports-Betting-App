@@ -132,16 +132,6 @@ class BettingEventTableViewCell: UITableViewCell {
         }
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        homeWinView.backgroundColor = .clear
-        drawView.backgroundColor = .clear
-        awayWinView.backgroundColor = .clear
-        homeWinView.layer.borderColor = Theme.Colors.border.cgColor
-        drawView.layer.borderColor = Theme.Colors.border.cgColor
-        awayWinView.layer.borderColor = Theme.Colors.border.cgColor
-    }
-    
     private func updateStackViewDistribution() {
         let visibleViews = [homeWinView, drawView, awayWinView].filter { !$0.isHidden }
         
