@@ -26,6 +26,6 @@
         <key>NSUserTrackingUsageDescription</key>
         <string>Uygulama deneyiminizi iyileştirmek ve size daha iyi hizmet sunmak için izninizi istiyoruz. Verileriniz, uygulamayı kullanım şeklinize göre kişiselleştirme ve geliştirme amacıyla kullanılacaktır.</string>
         <key>CFBundleAllowMixedLocalizations</key>
-                <true/>
+        <true/>
     </dict>
 </plist>

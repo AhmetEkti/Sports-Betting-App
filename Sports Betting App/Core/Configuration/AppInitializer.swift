@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseCore
+import UIKit
 
 class AppInitializer {
     static let shared = AppInitializer()
@@ -18,9 +19,15 @@ class AppInitializer {
             TrackingPermissionManager.shared.requestTrackingPermission { granted in
                 if granted {
                     FirebaseApp.configure()
+                    self.setupAnalytics()
                 }
                 completion()
             }
         }
+    }
+    
+    private func setupAnalytics() {
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        AnalyticsLogger.shared.logDeviceStats()
     }
 }

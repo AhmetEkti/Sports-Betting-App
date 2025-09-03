@@ -202,7 +202,6 @@ extension BettingDashboardViewController: UITableViewDataSource, UITableViewDele
                 self?.basketViewModel.addToBasket(event: event, outcome: outcome, marketType: marketType)
             }
         }
-        
         return cell
     }
 }

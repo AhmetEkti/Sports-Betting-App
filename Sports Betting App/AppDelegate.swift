@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+
 extension AppDelegate{
     func initializeApp() {
         AppInitializer.shared.initialize {}
